@@ -1,2 +1,2 @@
 # js-dev-env
-JavaScript Development Environment Based on 
+JavaScript Development Environment Based on Pluralsight
