@@ -1,16 +1,18 @@
 {
 	"name": "js-dev-env",
 	"version": "1.0.0",
+	"author": "Nate Greenwood",
 	"description": "JavaScript development environment.",
+	"license": "MIT",
 	"scripts": {
 		"prestart": "babel-node buildScripts/startMessage.js",
-		"start": "npm-run-all --parallel open:src",
+		"start": "npm-run-all --parallel open:src lint:watch",
 		"open:src": "babel-node buildScripts/srcServer.js",
+		"lint": "esw webpack.config.* src buildScripts --color",
+		"lint:watch": "npm run lint -- --watch",
 		"localtunnel": "lt --port 3000 --subdomain ngreenwood",
 		"share": "npm-run-all --parallel start localtunnel"
 	},
-	"author": "Nate Greenwood",
-	"license": "MIT",
 	"dependencies": {
 		"whatwg-fetch": "1.0.0"
 	},
