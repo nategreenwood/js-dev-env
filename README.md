@@ -1,4 +1,4 @@
-
+[<img src="https://travis-ci.org/nategreenwood/js-dev-env.svg?branch=master" alt="Build Status" />](https://travis-ci.org/nategreenwood/js-dev-env)
 ---
 # js-dev-env
 JavaScript Development Environment Based on Pluralsight
