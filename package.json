@@ -11,7 +11,8 @@
 		"lint": "esw webpack.config.* src buildScripts --color",
 		"lint:watch": "npm run lint -- --watch",
 		"localtunnel": "lt --port 3000 --subdomain ngreenwood",
-		"share": "npm-run-all --parallel start localtunnel"
+		"share": "npm-run-all --parallel start localtunnel",
+		"test": "mocha --reporter list buildScripts/testSetup.js \"src/**/*.test.js\""
 	},
 	"dependencies": {
 		"whatwg-fetch": "1.0.0"
