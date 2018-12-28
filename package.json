@@ -12,7 +12,8 @@
 		"lint:watch": "npm run lint -- --watch",
 		"localtunnel": "lt --port 3000 --subdomain ngreenwood",
 		"share": "npm-run-all --parallel start localtunnel",
-		"test": "mocha --reporter list buildScripts/testSetup.js \"src/**/*.test.js\""
+		"test": "mocha --reporter list buildScripts/testSetup.js \"src/**/*.test.js\"",
+		"test-watch": "npm run test -- --watch"
 	},
 	"dependencies": {
 		"whatwg-fetch": "1.0.0"
