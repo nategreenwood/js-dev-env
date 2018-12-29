@@ -16,6 +16,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 }))
 
 app.get('/', function(req, res) {
+	res.setHeader("X-IsDebug", config.debug);
 	res.sendFile(path.join(__dirname, '../src/index.html'));
 });
 
@@ -24,6 +25,5 @@ app.listen(port, function(err) {
 		console.log(err);
 	} else {
 		open('http://localhost:' + port);
-		//open(`http://${ltSubDomain}.localtunnel.me`);
 	}
 });
