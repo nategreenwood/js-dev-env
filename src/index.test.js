@@ -1,6 +1,7 @@
 import {expect} from 'chai';
 import jsdom from 'jsdom';
 import fs from 'fs';
+import data from './index.js';
 
 describe('The first test', () => {
 	it('should pass', () => {
@@ -18,5 +19,18 @@ describe('index.html', () => {
 			done();
 			window.close();
 		});
+	});
+});
+
+describe('index.js', () => {
+	it('envStuff', (done) => {
+		expect(data).to.not.be.null;
+		expect(data).to.not.be.undefined;
+		expect(data.courseValue).to.equal('$1,000.00');
+		expect(data.anArray[0]).to.equal(1);
+		expect(data.anObject.val1).to.equal(1);
+		expect(data.aFunction()).to.equal(data.courseValue);
+
+		done();
 	});
 });
